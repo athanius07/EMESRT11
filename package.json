@@ -1,0 +1,13 @@
+{
+  "name": "emesrt-tracker",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "postinstall": "echo '\nDone. Deploy on Netlify and open /index.html'"
+  },
+  "dependencies": {
+    "@netlify/blobs": "^6.4.0",
+    "csv-stringify": "^6.5.0"
+  }
+}
