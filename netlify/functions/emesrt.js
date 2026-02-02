@@ -106,8 +106,8 @@ exports.handler = async (event) => {
 
   if (wantCSV){
     const headers = Object.keys(filtered[0] || {
-      'Jurisdiction/Body': '', Country: '', Title: '', Type: '', 'Publication Date': '', Status: '', 'EMESRT Scope (L7/L8/L9)?': '', URL: '', Notes: ''
-    });
+  'Jurisdiction/Body': '', Country: '', Title: '', Type: '', 'Publication Date': '', Status: '', 'EMESRT Scope (L7/L8/L9)?': '', URL: '', Notes: ''
+});
     const data = filtered.map(r => headers.map(h => (r[h] ?? '')));
     const csv = stringify([headers, ...data]);
     return { statusCode: 200, headers: { 'Content-Type': 'text/csv; charset=utf-8', 'Content-Disposition': 'attachment; filename="emesrt_l7l8l9.csv"' }, body: csv };
